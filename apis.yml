@@ -1,8 +1,18 @@
 aid: aetion
 name: Aetion
-description: 'Aetion is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aetion is a healthcare technology company that builds real-world evidence
+  (RWE) software for biopharma, medical device manufacturers, payers and regulators.
+  Its Aetion Evidence Platform (AEP) turns claims, electronic health record, registry,
+  patient-reported and trial data into transparent, reproducible, regulatory-grade
+  evidence, delivered as a set of applications: Discover for exploratory analysis,
+  Substantiate for study implementation, Activate as a low-code plus hosted-code workbench,
+  and Generate for synthetic data. Founded by two Harvard Medical School professors,
+  Aetion was acquired by Datavant; the acquisition closed 11 July 2025 and Aetion now
+  operates inside Datavant''s Life Sciences business. As of this profile the aetion.com
+  domain redirects wholesale to datavant.com and Aetion publishes no standalone developer
+  program, public API reference or machine-readable specification.'
 url: https://raw.githubusercontent.com/api-evangelist/aetion/refs/heads/main/apis.yml
+image: https://avatars.githubusercontent.com/u/54075156?v=4
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,12 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Real-World Evidence
+- Healthcare
+- Life Sciences
+- Clinical Research
+- Health Data
+- Data Analytics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,41 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aetion-domain-security.yml
 - type: Website
+  url: https://aetion.com/
+- type: GitHubOrganization
+  url: https://github.com/aetion
+- type: Support
+  url: https://support.aetion.com/
+- type: PrivacyPolicy
+  url: https://www.datavant.com/privacy-policy
+- type: SecondaryMarket
   url: https://forgeglobal.com/aetion_stock/
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Aetion was absorbed into Datavant when the acquisition closed on 11 July 2025, and
+    every path on aetion.com — including /.well-known/* — now answers HTTP 301 into
+    www.datavant.com, so there is no Aetion-origin developer surface left to read; the
+    only Aetion host still serving anything of its own is the customer support portal at
+    support.aetion.com, a Salesforce Experience Cloud community.
+  evidence:
+  - url: https://aetion.com/
+    status: 301
+  - url: https://aetion.com/technology/platform/
+    status: 301
+  - url: https://aetion.com/.well-known/agent-card.json
+    status: 301
+  - url: https://support.aetion.com/
+    status: 503
+  - url: https://github.com/aetion
+    status: 200
+  checked: '2026-08-06'

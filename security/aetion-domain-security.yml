@@ -1,0 +1,22 @@
+generated: '2026-08-06'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: aetion.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 20 18:17:57 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  note: >-
+    aetion.com and www.aetion.com both answer HTTP 301 (HubSpot-managed redirects behind
+    Cloudflare) and send strict-transport-security: max-age=31536000 on the redirect
+    response. The apex 301s to https://www.datavant.com/ following the Datavant
+    acquisition, so no Aetion-origin content is served from this host.
+domains:
+- domain: aetion.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
